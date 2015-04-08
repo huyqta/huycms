@@ -18,6 +18,9 @@ namespace huycms
                         "~/Scripts/jquery.unobtrusive*",
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/manage").Include(
+                        "~/Scripts/manage.js"));
+
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
@@ -42,11 +45,13 @@ namespace huycms
 
             // Bootstrap
             bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
-                "~/Content/bootstrap.min.css",
-                "~/Content/bootstrap-theme.min.css"
+                        "~/Content/bootstrap.min.css",
+                        "~/Content/bootstrap-theme.min.css",
+                        "~/Content/font-awesome.min.css"
                 ));
+
             bundles.Add(new ScriptBundle("~/Content/bootstrap").Include(
-                "~/Scripts/bootstrap.min.js"
+                        "~/Scripts/bootstrap.min.js"
                 ));
         }
     }
