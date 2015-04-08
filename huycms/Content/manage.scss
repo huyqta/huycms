@@ -1,0 +1,91 @@
+﻿
+// Define color
+$color1: #000000;
+$color2: #303F42;
+$color3: #55676A;
+$color4: #6C7A7D;
+$color5: #FFFFFF;
+$color6: #EEC015;
+
+$font_arial: Arial, Helvetica, sans-serif;
+$font_tahoma: Tahoma, Geneva, sans-serif;
+$font_vernada: Verdana, Geneva, sans-serif;
+
+@mixin animation ($delay, $duration, $animation, $iteration_count, $direction) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-name: $animation;
+    -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+    -moz-animation-iteration-count: $iteration_count;
+    -o-animation-iteration-count: $iteration_count;
+    -webkit-animation-iteration-count: $iteration_count;
+    animation-iteration-count: $iteration_count;
+    -moz-animation-direction: $direction;
+    -o-animation-direction: $direction;
+    -webkit-animation-direction:  $direction;
+    animation-direction: $direction;
+}
+
+body {
+    background-color: $color4;
+    font-family: $font_tahoma;
+}
+
+header {
+    background-color: $color2;
+    height: 50px;
+}
+
+.odd-logo{
+    font-weight: bolder;
+    font-size: 32px;
+    @include animation(1s, 3s, 'color_change', infinite, normal);
+}
+
+.even-logo{
+    font-weight: bolder;
+    font-size: 32px;
+    @include animation(1s, 3s, 'color_change', infinite, reverse);
+}
+
+@-webkit-keyframes color_change {
+    0% { color: $color2; }
+    50% { color: $color5; }
+    100% { color: $color2; }
+}
+
+@-moz-keyframes color_change {
+    0% { color: $color2; }
+    50% { color: $color5; }
+    100% { color: $color2; }
+}
+
+@-ms-keyframes color_change {
+    0% { color: $color2; }
+    50% { color: $color5; }
+    100% { color: $color2; }
+}
+
+@-o-keyframes color_change {
+    0% { color: $color2; }
+    50% { color: $color5; }
+    100% { color: $color2; }
+}
+
+@keyframes color_change {
+    0% { color: $color2; }
+    50% { color: $color5; }
+    100% { color: $color2; }
+}

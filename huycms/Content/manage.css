@@ -1,0 +1,123 @@
+﻿body {
+  background-color: #6C7A7D;
+  font-family: Tahoma, Geneva, sans-serif; }
+
+header {
+  background-color: #303F42;
+  height: 50px; }
+
+.odd-logo {
+  font-weight: bolder;
+  font-size: 32px;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: 'color_change';
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 1s;
+  -moz-animation-duration: 3s;
+  -moz-animation-name: 'color_change';
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 1s;
+  -o-animation-duration: 3s;
+  -o-animation-name: 'color_change';
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-name: 'color_change';
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -moz-animation-direction: normal;
+  -o-animation-direction: normal;
+  -webkit-animation-direction: normal;
+  animation-direction: normal; }
+
+.even-logo {
+  font-weight: bolder;
+  font-size: 32px;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-name: 'color_change';
+  -webkit-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-delay: 1s;
+  -moz-animation-duration: 3s;
+  -moz-animation-name: 'color_change';
+  -moz-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -o-animation-delay: 1s;
+  -o-animation-duration: 3s;
+  -o-animation-name: 'color_change';
+  -o-animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  animation-delay: 1s;
+  animation-duration: 3s;
+  animation-name: 'color_change';
+  animation-fill-mode: forwards;
+  /* this prevents the animation from restarting! */
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -moz-animation-direction: reverse;
+  -o-animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse; }
+
+@-webkit-keyframes color_change {
+  0% {
+    color: #303F42; }
+
+  50% {
+    color: #FFFFFF; }
+
+  100% {
+    color: #303F42; } }
+
+@-moz-keyframes color_change {
+  0% {
+    color: #303F42; }
+
+  50% {
+    color: #FFFFFF; }
+
+  100% {
+    color: #303F42; } }
+
+@-ms-keyframes color_change {
+  0% {
+    color: #303F42; }
+
+  50% {
+    color: #FFFFFF; }
+
+  100% {
+    color: #303F42; } }
+
+@-o-keyframes color_change {
+  0% {
+    color: #303F42; }
+
+  50% {
+    color: #FFFFFF; }
+
+  100% {
+    color: #303F42; } }
+
+@keyframes color_change {
+  0% {
+    color: #303F42; }
+
+  50% {
+    color: #FFFFFF; }
+
+  100% {
+    color: #303F42; } }
+
+/*# sourceMappingURL=manage.css.map */
