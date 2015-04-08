@@ -1,0 +1,144 @@
+﻿
+// Define color
+$color1: #000000;
+$color2: #303F42;
+$color3: #55676A;
+$color4: #6C7A7D;
+$color5: #FFFFFF;
+$color6: #EEC015;
+
+$logo_size: 28px;
+
+$menu_panel_width: 250px;
+
+$header_height: 80px;
+
+$font_arial: Arial, Helvetica, sans-serif;
+$font_tahoma: Tahoma, Geneva, sans-serif;
+$font_vernada: Verdana, Geneva, sans-serif;
+
+@mixin animation ($delay, $duration, $animation, $iteration_count, $direction) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+    -o-animation-delay: $delay;
+    -o-animation-duration: $duration;
+    -o-animation-name: $animation;
+    -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+    -moz-animation-iteration-count: $iteration_count;
+    -o-animation-iteration-count: $iteration_count;
+    -webkit-animation-iteration-count: $iteration_count;
+    animation-iteration-count: $iteration_count;
+    -moz-animation-direction: $direction;
+    -o-animation-direction: $direction;
+    -webkit-animation-direction:  $direction;
+    animation-direction: $direction;
+}
+
+body {
+    background-color: $color5;
+    font-family: $font_tahoma;
+}
+
+header {
+    background-color: $color4;
+    height: $header_height;
+    border-bottom: 5px solid $color1;
+}
+
+.logo{
+    display: inline-block;
+    width: $menu_panel_width;
+    height: $header_height;
+    background-color: $color3;
+    text-align: center;
+    vertical-align: middle;
+    line-height: $header_height;
+    border-bottom: 5px solid $color5;
+}
+
+.container-fluid{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.toggle-aside{
+    display: inline-block;
+}
+
+.odd-logo{
+    font-weight: bolder;
+    font-size: $logo_size;
+    @include animation(1s, 3s, 'color_change', infinite, normal);
+}
+
+.even-logo{
+    font-weight: bolder;
+    font-size: $logo_size;
+    @include animation(1s, 3s, 'color_change', infinite, reverse);
+}
+
+aside{
+    display: inline-block !important;
+    background-color: $color2;
+    width: $menu_panel_width;
+    height: 643px;
+    margin-left: -15px;
+}
+
+section{
+    display: inline-block !important;
+}
+
+.content{
+    display: inline-block !important;
+}
+
+@-webkit-keyframes color_change {
+    0% { color: $color1; }
+    25% { color: $color3; }
+    50% { color: $color5; }
+    75% { color: $color3; }
+    100% { color: $color1; }
+}
+
+@-moz-keyframes color_change {
+    0% { color: $color1; }
+    25% { color: $color3; }
+    50% { color: $color5; }
+    75% { color: $color3; }
+    100% { color: $color1; }
+}
+
+@-ms-keyframes color_change {
+    0% { color: $color1; }
+    25% { color: $color3; }
+    50% { color: $color5; }
+    75% { color: $color3; }
+    100% { color: $color1; }
+}
+
+@-o-keyframes color_change {
+    0% { color: $color1; }
+    25% { color: $color3; }
+    50% { color: $color5; }
+    75% { color: $color3; }
+    100% { color: $color1; }
+}
+
+@keyframes color_change {
+    0% { color: $color1; }
+    25% { color: $color3; }
+    50% { color: $color5; }
+    75% { color: $color3; }
+    100% { color: $color1; }
+}
