@@ -89,14 +89,14 @@ header {
   animation-direction: reverse; }
 
 aside {
-  display: inline-block !important;
+  /*display: none;*/
   background-color: #303F42;
   width: 250px;
   height: 643px;
   margin-left: -15px; }
 
 section {
-  display: inline-block !important; }
+  position: relative; }
 
 .content {
   display: inline-block !important; }

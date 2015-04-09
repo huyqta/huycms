@@ -7,6 +7,8 @@ if (typeof jQuery === "undefined") {
 
 $(function () {
     $('.toggle-aside').click(function () {
-        $('aside').toggle('slide', { direction: 'left' }, 1000);
+        $('aside').toggle('slide', {
+            direction: 'left'
+        }, 1000);
     })
 })

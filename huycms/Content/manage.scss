@@ -88,7 +88,7 @@ header {
 }
 
 aside{
-    display: inline-block !important;
+    /*display: none;*/
     background-color: $color2;
     width: $menu_panel_width;
     height: 643px;
@@ -96,7 +96,7 @@ aside{
 }
 
 section{
-    display: inline-block !important;
+    position: relative;
 }
 
 .content{
