@@ -11,7 +11,8 @@ $logo_size: 28px;
 
 $menu_panel_width: 250px;
 
-$header_height: 80px;
+$header_height: 10%;
+$content_height: 90%;
 
 $font_arial: Arial, Helvetica, sans-serif;
 $font_tahoma: Tahoma, Geneva, sans-serif;
@@ -55,10 +56,10 @@ ul {
     padding: 0;
 }
 
-/*li {
+li {
     margin: 0;
     padding: 0;
-}*/
+}
 
 header {
     background-color: $color4;
@@ -69,12 +70,11 @@ header {
 .logo {
     display: inline-block;
     width: $menu_panel_width;
-    height: $header_height;
+    height: 100%;
     background-color: $color3;
     text-align: center;
     vertical-align: middle;
-    line-height: $header_height;
-    border-bottom: 5px solid $color5;
+    line-height: 100%;
 }
 
 .container-fluid {
@@ -103,39 +103,69 @@ nav {
     float: left;
     background-color: $color2;
     width: $menu_panel_width;
-    margin-left: -15px;
+    /*margin-left: -15px;*/
     display: block;
     height: 100%;
 }
 
-.nav ul li {
-    color: $color5;
-    border-bottom: 2px groove $color3;
-    height: 35px;
-    line-height: 35px;
-    vertical-align: middle;
-    padding-left: 15px;
-    /*@include transition(all, 0.3s, ease-in-out);*/
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+.nav-active{
+    background-color: $color4 !important;
+    color: $color1 !important;
 }
 
-.nav ul li:hover {
+.nav ul > li{
+    display: block;
+    color: $color5;
+    /*border-bottom: 2px groove $color3;*/
+    vertical-align: middle;
+    /*padding-left: 15px;*/
+    line-height: 35px;
+    /*@include transition(all, 0.3s, ease-in-out);*/
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.show-element{
+    display: block;
+}
+
+.hide-element{
+    display: none;
+}
+
+.nav ul > li > ul{
+    display: none;
+}
+
+.nav ul > li > ul > li{
+    background-color: $color3;
+    color: $color5;
+    /*border-bottom: 2px groove $color3;*/
+    vertical-align: middle;
+    /*padding-left: 15px;*/
+    line-height: 35px;
+    /*@include transition(all, 0.3s, ease-in-out);*/
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.nav ul > li:hover {
     background-color: $color4;
 }
 
 section {
     position: relative;
     float: left;
-    background: $color4;
     overflow: auto;
     height: 100%;
 }
 
 .content {
-    height: 100%;
+    height: $content_height;
     /*display: inline-block !important;*/
 }
 

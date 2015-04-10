@@ -7,24 +7,23 @@ ul {
   margin: 0;
   padding: 0; }
 
-/*li {
-    margin: 0;
-    padding: 0;
-}*/
+li {
+  margin: 0;
+  padding: 0; }
+
 header {
   background-color: #6C7A7D;
-  height: 80px;
+  height: 10%;
   border-bottom: 5px solid #000000; }
 
 .logo {
   display: inline-block;
   width: 250px;
-  height: 80px;
+  height: 100%;
   background-color: #55676A;
   text-align: center;
   vertical-align: middle;
-  line-height: 80px;
-  border-bottom: 5px solid #FFFFFF; }
+  line-height: 100%; }
 
 .container-fluid {
   padding-left: 0 !important;
@@ -102,35 +101,60 @@ nav {
   float: left;
   background-color: #303F42;
   width: 250px;
-  margin-left: -15px;
+  /*margin-left: -15px;*/
   display: block;
   height: 100%; }
 
-.nav ul li {
-  color: #FFFFFF;
-  border-bottom: 2px groove #55676A;
-  height: 35px;
-  line-height: 35px;
-  vertical-align: middle;
-  padding-left: 15px;
-  /*@include transition(all, 0.3s, ease-in-out);*/
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+.nav-active {
+  background-color: #6C7A7D !important;
+  color: #000000 !important; }
 
-.nav ul li:hover {
+.nav ul > li {
+  display: block;
+  color: #FFFFFF;
+  /*border-bottom: 2px groove $color3;*/
+  vertical-align: middle;
+  /*padding-left: 15px;*/
+  line-height: 35px;
+  /*@include transition(all, 0.3s, ease-in-out);*/
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out; }
+
+.show-element {
+  display: block; }
+
+.hide-element {
+  display: none; }
+
+.nav ul > li > ul {
+  display: none; }
+
+.nav ul > li > ul > li {
+  background-color: #55676A;
+  color: #FFFFFF;
+  /*border-bottom: 2px groove $color3;*/
+  vertical-align: middle;
+  /*padding-left: 15px;*/
+  line-height: 35px;
+  /*@include transition(all, 0.3s, ease-in-out);*/
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out; }
+
+.nav ul > li:hover {
   background-color: #6C7A7D; }
 
 section {
   position: relative;
   float: left;
-  background: #6C7A7D;
   overflow: auto;
   height: 100%; }
 
 .content {
-  height: 100%;
+  height: 90%;
   /*display: inline-block !important;*/ }
 
 @-webkit-keyframes color_change {

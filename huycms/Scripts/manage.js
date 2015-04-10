@@ -10,12 +10,22 @@ $(function () {
         if ($('nav').css('width') == '0px') {
             $('nav').animate({
                 width: 250
-            }, 300);
+            }, 200);
         }
         else {
             $('nav').animate({
                 width: 0
-            }, 300);
+            }, 200);
         }
+    })
+
+    $('.nav').find('li').click(function (e) {
+        $('.nav').find('li').removeClass('nav-active');
+        $(this).addClass('nav-active');
+        
+        if ($(this).find('li').length > 0) {
+            $(this).find('ul').slideToggle(300);
+        }
+        
     })
 })
