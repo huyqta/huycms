@@ -7,12 +7,12 @@ $color4: #6C7A7D;
 $color5: #FFFFFF;
 $color6: #EEC015;
 
-$logo_size: 32px;
+$logo_size: 28px;
 
 $menu_panel_width: 250px;
 
-$header_height: 8%;
-$content_height: 92%;
+$header_height: 80px;
+$content_height: 100%;
 
 $font_arial: Arial, Helvetica, sans-serif;
 $font_tahoma: Tahoma, Geneva, sans-serif;
@@ -114,7 +114,7 @@ nav {
 }
 
 .nav-active{
-    background-color: $color3 !important;
+    background-color: $color4 !important;
     /*color: $color1 !important;*/
 }
 
@@ -134,6 +134,15 @@ nav {
 
 .show-element{
     display: block;
+}
+
+a{
+    text-decoration: none;
+    color: $color5 !important;
+}
+
+a:hover{
+    text-decoration: none !important;
 }
 
 .hide-element{
@@ -158,19 +167,29 @@ nav {
     transition: all 0.1s ease-in-out;
 }
 
-.nav ul > li:hover {
+.li-hover{
     background-color: $color4;
 }
+
+/*.nav ul > li:hover {
+    background-color: $color4;
+}
+
+.nav ul > li > ul > li:hover {
+    background-color: $color4;
+}*/
 
 section {
     position: relative;
     float: left;
     overflow: auto;
     height: $content_height;
+    width: 80%;
 }
 
 .content {
     height: $content_height;
+     
     /*display: inline-block !important;*/
 }
 

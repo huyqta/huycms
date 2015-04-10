@@ -36,11 +36,12 @@
     <div class="content">
         <nav class="nav">
             <ul>
-                <li class="nav-active">Dashboard</li>
-                <li>
-                    List 1
+                <li>@Ajax.ActionLink("Dashboard", "Index", "Manage", null, new AjaxOptions { HttpMethod = "get", UpdateTargetId = "body" }, new { })</li>
+                <li>@Ajax.ActionLink("Account", "Index", "Account", null, new AjaxOptions { HttpMethod = "get", UpdateTargetId = "body" }, new { })</li>
+                @*<li>
+                    Lists
                     <ul>
-                        <li>Dashboard</li>
+                        <li>@Ajax.ActionLink("Accounts", "Index", "Account", null, new AjaxOptions { HttpMethod = "get", UpdateTargetId = "body" }, new { })</li>
                         <li>List 1</li>
                         <li>List 1</li>
                         <li>List 1</li>
@@ -58,7 +59,7 @@
                         <li>List 1</li>
                     </ul>
                 </li>
-                <li>List 1</li>
+                <li>List 1</li>*@
             </ul>
         </nav>
         <section>
