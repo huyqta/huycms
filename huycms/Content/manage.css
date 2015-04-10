@@ -1,7 +1,16 @@
-﻿body {
+﻿html, body {
   background-color: #FFFFFF;
-  font-family: Tahoma, Geneva, sans-serif; }
+  font-family: Tahoma, Geneva, sans-serif;
+  height: 100%; }
 
+ul {
+  margin: 0;
+  padding: 0; }
+
+/*li {
+    margin: 0;
+    padding: 0;
+}*/
 header {
   background-color: #6C7A7D;
   height: 80px;
@@ -88,18 +97,41 @@ header {
   -webkit-animation-direction: reverse;
   animation-direction: reverse; }
 
-aside {
-  /*display: none;*/
+nav {
+  position: relative;
+  float: left;
   background-color: #303F42;
   width: 250px;
-  height: 643px;
-  margin-left: -15px; }
+  margin-left: -15px;
+  display: block;
+  height: 100%; }
+
+.nav ul li {
+  color: #FFFFFF;
+  border-bottom: 2px groove #55676A;
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+  padding-left: 15px;
+  /*@include transition(all, 0.3s, ease-in-out);*/
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.nav ul li:hover {
+  background-color: #6C7A7D; }
 
 section {
-  position: relative; }
+  position: relative;
+  float: left;
+  background: #6C7A7D;
+  overflow: auto;
+  height: 100%; }
 
 .content {
-  display: inline-block !important; }
+  height: 100%;
+  /*display: inline-block !important;*/ }
 
 @-webkit-keyframes color_change {
   0% {

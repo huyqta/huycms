@@ -40,14 +40,25 @@ $font_vernada: Verdana, Geneva, sans-serif;
     animation-iteration-count: $iteration_count;
     -moz-animation-direction: $direction;
     -o-animation-direction: $direction;
-    -webkit-animation-direction:  $direction;
+    -webkit-animation-direction: $direction;
     animation-direction: $direction;
 }
 
-body {
+html, body {
     background-color: $color5;
     font-family: $font_tahoma;
+    height: 100%;
 }
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*li {
+    margin: 0;
+    padding: 0;
+}*/
 
 header {
     background-color: $color4;
@@ -55,7 +66,7 @@ header {
     border-bottom: 5px solid $color1;
 }
 
-.logo{
+.logo {
     display: inline-block;
     width: $menu_panel_width;
     height: $header_height;
@@ -66,79 +77,181 @@ header {
     border-bottom: 5px solid $color5;
 }
 
-.container-fluid{
+.container-fluid {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
 
-.toggle-aside{
+.toggle-aside {
     display: inline-block;
 }
 
-.odd-logo{
+.odd-logo {
     font-weight: bolder;
     font-size: $logo_size;
     @include animation(1s, 3s, 'color_change', infinite, normal);
 }
 
-.even-logo{
+.even-logo {
     font-weight: bolder;
     font-size: $logo_size;
     @include animation(1s, 3s, 'color_change', infinite, reverse);
 }
 
-aside{
-    /*display: none;*/
+nav {
+    position: relative;
+    float: left;
     background-color: $color2;
     width: $menu_panel_width;
-    height: 643px;
     margin-left: -15px;
+    display: block;
+    height: 100%;
 }
 
-section{
+.nav ul li {
+    color: $color5;
+    border-bottom: 2px groove $color3;
+    height: 35px;
+    line-height: 35px;
+    vertical-align: middle;
+    padding-left: 15px;
+    /*@include transition(all, 0.3s, ease-in-out);*/
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav ul li:hover {
+    background-color: $color4;
+}
+
+section {
     position: relative;
+    float: left;
+    background: $color4;
+    overflow: auto;
+    height: 100%;
 }
 
-.content{
-    display: inline-block !important;
+.content {
+    height: 100%;
+    /*display: inline-block !important;*/
 }
 
 @-webkit-keyframes color_change {
-    0% { color: $color1; }
-    25% { color: $color3; }
-    50% { color: $color5; }
-    75% { color: $color3; }
-    100% { color: $color1; }
+    0% {
+        color: $color1;
+    }
+
+    25% {
+        color: $color3;
+    }
+
+    50% {
+        color: $color5;
+    }
+
+    75% {
+        color: $color3;
+    }
+
+    100% {
+        color: $color1;
+    }
 }
 
 @-moz-keyframes color_change {
-    0% { color: $color1; }
-    25% { color: $color3; }
-    50% { color: $color5; }
-    75% { color: $color3; }
-    100% { color: $color1; }
+    0% {
+        color: $color1;
+    }
+
+    25% {
+        color: $color3;
+    }
+
+    50% {
+        color: $color5;
+    }
+
+    75% {
+        color: $color3;
+    }
+
+    100% {
+        color: $color1;
+    }
 }
 
 @-ms-keyframes color_change {
-    0% { color: $color1; }
-    25% { color: $color3; }
-    50% { color: $color5; }
-    75% { color: $color3; }
-    100% { color: $color1; }
+    0% {
+        color: $color1;
+    }
+
+    25% {
+        color: $color3;
+    }
+
+    50% {
+        color: $color5;
+    }
+
+    75% {
+        color: $color3;
+    }
+
+    100% {
+        color: $color1;
+    }
 }
 
 @-o-keyframes color_change {
-    0% { color: $color1; }
-    25% { color: $color3; }
-    50% { color: $color5; }
-    75% { color: $color3; }
-    100% { color: $color1; }
+    0% {
+        color: $color1;
+    }
+
+    25% {
+        color: $color3;
+    }
+
+    50% {
+        color: $color5;
+    }
+
+    75% {
+        color: $color3;
+    }
+
+    100% {
+        color: $color1;
+    }
 }
 
 @keyframes color_change {
-    0% { color: $color1; }
-    25% { color: $color3; }
-    50% { color: $color5; }
-    75% { color: $color3; }
-    100% { color: $color1; }
+    0% {
+        color: $color1;
+    }
+
+    25% {
+        color: $color3;
+    }
+
+    50% {
+        color: $color5;
+    }
+
+    75% {
+        color: $color3;
+    }
+
+    100% {
+        color: $color1;
+    }
+}
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
 }

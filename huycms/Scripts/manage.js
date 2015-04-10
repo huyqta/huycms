@@ -7,8 +7,15 @@ if (typeof jQuery === "undefined") {
 
 $(function () {
     $('.toggle-aside').click(function () {
-        $('aside').toggle('slide', {
-            direction: 'left'
-        }, 1000);
+        if ($('nav').css('width') == '0px') {
+            $('nav').animate({
+                width: 250
+            }, 300);
+        }
+        else {
+            $('nav').animate({
+                width: 0
+            }, 300);
+        }
     })
 })
