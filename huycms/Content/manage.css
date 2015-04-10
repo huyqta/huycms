@@ -13,7 +13,7 @@ li {
 
 header {
   background-color: #6C7A7D;
-  height: 10%;
+  height: 8%;
   border-bottom: 5px solid #000000; }
 
 .logo {
@@ -22,8 +22,12 @@ header {
   height: 100%;
   background-color: #55676A;
   text-align: center;
-  vertical-align: middle;
-  line-height: 100%; }
+  padding-top: 15px;
+  /*vertical-align: middle;
+    line-height: 100%;*/ }
+
+.toggle-aside i {
+  font-size: 32px; }
 
 .container-fluid {
   padding-left: 0 !important;
@@ -34,7 +38,7 @@ header {
 
 .odd-logo {
   font-weight: bolder;
-  font-size: 28px;
+  font-size: 32px;
   -webkit-animation-delay: 1s;
   -webkit-animation-duration: 3s;
   -webkit-animation-name: 'color_change';
@@ -66,7 +70,7 @@ header {
 
 .even-logo {
   font-weight: bolder;
-  font-size: 28px;
+  font-size: 32px;
   -webkit-animation-delay: 1s;
   -webkit-animation-duration: 3s;
   -webkit-animation-name: 'color_change';
@@ -106,8 +110,8 @@ nav {
   height: 100%; }
 
 .nav-active {
-  background-color: #6C7A7D !important;
-  color: #000000 !important; }
+  background-color: #55676A !important;
+  /*color: $color1 !important;*/ }
 
 .nav ul > li {
   display: block;
@@ -151,10 +155,10 @@ section {
   position: relative;
   float: left;
   overflow: auto;
-  height: 100%; }
+  height: 92%; }
 
 .content {
-  height: 90%;
+  height: 92%;
   /*display: inline-block !important;*/ }
 
 @-webkit-keyframes color_change {
