@@ -169,8 +169,7 @@ section {
   position: relative;
   float: left;
   overflow: auto;
-  height: 100%;
-  width: 80%; }
+  height: 100%; }
 
 .content {
   height: 100%;

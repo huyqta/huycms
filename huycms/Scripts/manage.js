@@ -7,16 +7,28 @@ if (typeof jQuery === "undefined") {
 
 $(function () {
     var show_nav = true;
+    var currentW = $(window).width();
+    var menu_panel_width = 250;
+
+    $('section').width(currentW - menu_panel_width);
 
     $('.toggle-aside').click(function () {
         if (!show_nav) {
             $('nav').animate({
-                width: 250
+                width: menu_panel_width
+            }, 200);
+            
+            var setW = currentW - menu_panel_width;
+            $('section').animate({
+                width: setW
             }, 200);
         }
         else {
             $('nav').animate({
                 width: 0
+            }, 200);
+            $('section').animate({
+                width: currentW
             }, 200);
         }
         show_nav = !show_nav;
@@ -25,7 +37,7 @@ $(function () {
     $('.nav').find('li').click(function (e) {
         $('.nav').find('li').removeClass('nav-active');
         $(this).addClass('nav-active');
-        
+
         if ($(this).find('li').length > 0) {
             $(this).find('ul').slideToggle(300);
         }
@@ -42,9 +54,9 @@ $(function () {
     //$('.nav').find('li').hover(function () {
     //    $(this).toggleClass('nav-active');
     //})
-    })
+})
 
-function active_current_path(){
+function active_current_path() {
     var path = $(location).attr('pathname');
     $.each($('.nav').find('li > a'), function () {
         var href = $(this).attr('href');

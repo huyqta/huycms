@@ -1,6 +1,73 @@
-﻿@{
+﻿@model huycms.Models.AccountViewModel
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_ManageLayout.cshtml";
 }
+@Styles.Render("~/Style/DataTables")
+@Scripts.Render("~/Script/DataTables")
+<div class="page-header">
+    <hr />
+    <h2>Account</h2>
+    <hr />
+</div>
+<table id="dtbaccount" class="display" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var acc in Model.ListAccount)
+        {
+            <tr>
+                <td>acc.Username</td>
+                <td>acc.Password</td>
+            </tr>
+        }
+        
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>
+    </tfoot>
+</table>
 
-<h2>Account</h2>
+<script>
+    $(document).ready(function () {
+        var sZeroRecords = "No discount was found.";
+        var sEmptyTable = "No discount was found.";
+        var sInfoEmpty = ""
+
+        $('#dtbaccount').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "pagingType": "full_numbers",
+            "bSortClasses": false,
+            "order": [[1, "desc"]],
+            "dom": 'T<"clear">lfrtip',
+            "iDisplayLength": 25,
+            "bLengthChange": true,
+            "sDom": '<"top"ipf>rt<"bottom"ip><"clear">',
+            "columns": [
+              { "width": "50%" },
+              { "width": "50%" }
+            ],
+            "oLanguage": {
+                "oPaginate": {
+                    "sFirst": "<i class='fa fa-angle-double-left'></i>", // This is the link to the first page
+                    "sPrevious": "<i class='fa fa-angle-left'></i>", // This is the link to the previous page
+                    "sNext": "<i class='fa fa-angle-right'></i>", // This is the link to the next page
+                    "sLast": "<i class='fa fa-angle-double-right'></i>"
+                },
+                "sInfoFiltered": "",
+                "sInfo": "_START_ - _END_ of _TOTAL_",
+                "sInfoEmpty": sInfoEmpty,
+                "sEmptyTable": sEmptyTable,
+                "sZeroRecords": sZeroRecords,
+            }
+        });
+    });
+</script>

@@ -8,6 +8,7 @@ namespace huycms
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
+            BundleTable.EnableOptimizations = true;
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
@@ -52,6 +53,15 @@ namespace huycms
 
             bundles.Add(new ScriptBundle("~/Content/bootstrap").Include(
                         "~/Scripts/bootstrap.min.js"
+                ));
+
+            bundles.Add(new ScriptBundle("~/Script/DataTables").Include(
+                        "~/Scripts/jquery-1.11.1.min.js",
+                        "~/Scripts/jquery.dataTables.min.js"
+                ));
+
+            bundles.Add(new StyleBundle("~/Style/DataTable").Include(
+                        "~/Content/jquery.dataTables.css"
                 ));
         }
     }
