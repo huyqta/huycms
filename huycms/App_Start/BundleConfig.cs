@@ -60,7 +60,7 @@ namespace huycms
                         "~/Scripts/jquery.dataTables.min.js"
                 ));
 
-            bundles.Add(new StyleBundle("~/Style/DataTable").Include(
+            bundles.Add(new StyleBundle("~/Style/DataTables").Include(
                         "~/Content/jquery.dataTables.css"
                 ));
         }

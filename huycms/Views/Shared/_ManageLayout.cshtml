@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
     <link rel="stylesheet" href="~/Content/bootstrap-theme.min.css" />
     <link rel="stylesheet" href="~/Content/font-awesome.css" />
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.css" />
 </head>
 
 <body>
@@ -22,49 +23,41 @@
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/manage")
     <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.6/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.6/integration/bootstrap/3/dataTables.bootstrap.js"></script>
     <header>
-        <div class="logo">
-            <span class="odd-logo">L</span>
-            <span class="even-logo">O</span>
-            <span class="odd-logo">G</span>
-            <span class="even-logo">O</span>
+        <div class=" logo">
+    <span class="odd-logo">L</span>
+    <span class="even-logo">O</span>
+    <span class="odd-logo">G</span>
+    <span class="even-logo">O</span>
+</div>
+<div class="toggle-aside">
+    <i class="fa fa-bars fa-lg btn"></i>
+</div>
+</header>
+<div class="content">
+    <nav class="nav">
+        <ul>
+            <li>@Ajax.ActionLink("Dashboard", "Index", "Manage", null, new AjaxOptions { HttpMethod = "get", UpdateTargetId = "body" }, new { })</li>
+            <li>@Ajax.ActionLink("Account", "Index", "Account", null, new AjaxOptions { HttpMethod = "get", UpdateTargetId = "body" }, new { })</li>
+        </ul>
+    </nav>
+    <section>
+        <div class="row">
+            <div class="col-md-1">
+
+            </div>
+            <div class="col-md-10">
+                @RenderBody()
+            </div>
+
+            <div class="col-md-1">
+
+            </div>
         </div>
-        <div class="toggle-aside">
-            <i class="fa fa-bars fa-lg btn"></i>
-        </div>
-    </header>
-    <div class="content">
-        <nav class="nav">
-            <ul>
-                <li>@Ajax.ActionLink("Dashboard", "Index", "Manage", null, new AjaxOptions { HttpMethod = "get", UpdateTargetId = "body" }, new { })</li>
-                <li>@Ajax.ActionLink("Account", "Index", "Account", null, new AjaxOptions { HttpMethod = "get", UpdateTargetId = "body" }, new { })</li>
-                @*<li>
-                    Lists
-                    <ul>
-                        <li>@Ajax.ActionLink("Accounts", "Index", "Account", null, new AjaxOptions { HttpMethod = "get", UpdateTargetId = "body" }, new { })</li>
-                        <li>List 1</li>
-                        <li>List 1</li>
-                        <li>List 1</li>
-                        <li>List 1</li>
-                    </ul>
-                </li>
-                <li>List 1</li>
-                <li>
-                    List 1
-                    <ul>
-                        <li>Dashboard</li>
-                        <li>List 1</li>
-                        <li>List 1</li>
-                        <li>List 1</li>
-                        <li>List 1</li>
-                    </ul>
-                </li>
-                <li>List 1</li>*@
-            </ul>
-        </nav>
-        <section>
-            @RenderBody()
-        </section>
-    </div>
+    </section>
+</div>
 </body>
 </html>

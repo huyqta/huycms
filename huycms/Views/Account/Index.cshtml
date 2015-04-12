@@ -3,14 +3,11 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_ManageLayout.cshtml";
 }
-@Styles.Render("~/Style/DataTables")
-@Scripts.Render("~/Script/DataTables")
 <div class="page-header">
-    <hr />
     <h2>Account</h2>
-    <hr />
 </div>
-<table id="dtbaccount" class="display" cellspacing="0" width="100%">
+<input type="button" class="btn btn-primary" value="Create" onclick="@Url.Action()" />
+<table id="dtbaccount" class="table table-striped table-bordered" cellspacing="0" width="100%">
     <thead>
         <tr>
             <th>Username</th>
@@ -21,18 +18,12 @@
         @foreach (var acc in Model.ListAccount)
         {
             <tr>
-                <td>acc.Username</td>
-                <td>acc.Password</td>
+                <td>@acc.Username</td>
+                <td>@acc.Password</td>
             </tr>
         }
-        
+
     </tbody>
-    <tfoot>
-        <tr>
-            <th>Username</th>
-            <th>Password</th>
-        </tr>
-    </tfoot>
 </table>
 
 <script>
@@ -41,16 +32,14 @@
         var sEmptyTable = "No discount was found.";
         var sInfoEmpty = ""
 
-        $('#dtbaccount').DataTable({
-            "processing": true,
-            "serverSide": true,
+        $('#dtbaccount').dataTable({
             "pagingType": "full_numbers",
             "bSortClasses": false,
             "order": [[1, "desc"]],
             "dom": 'T<"clear">lfrtip',
-            "iDisplayLength": 25,
+            "iDisplayLength": 10,
             "bLengthChange": true,
-            "sDom": '<"top"ipf>rt<"bottom"ip><"clear">',
+            "sDom": '<"top"f>rt<"bottom"ip><"clear">',
             "columns": [
               { "width": "50%" },
               { "width": "50%" }

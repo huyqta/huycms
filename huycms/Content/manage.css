@@ -130,7 +130,9 @@ nav {
   display: block; }
 
 a {
-  text-decoration: none;
+  text-decoration: none; }
+
+nav a {
   color: #FFFFFF !important; }
 
 a:hover {

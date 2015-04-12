@@ -60,7 +60,6 @@ function active_current_path() {
     var path = $(location).attr('pathname');
     $.each($('.nav').find('li > a'), function () {
         var href = $(this).attr('href');
-        console.log(href);
         if (href === path) {
             $(this).parent().addClass('nav-active');
         }
